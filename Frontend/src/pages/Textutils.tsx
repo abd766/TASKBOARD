@@ -65,7 +65,7 @@ const Textutils = () => {
   }
   return (
     <div className="container py-10">
-      <Heading title="TextUtils" description="You Personal Text debugger" />
+      <Heading title="Text-O-Fi" description="You Personal Text debugger" />
       <Separator className="mt-2 mb-4" />
       <Textarea
         value={text}
