@@ -60,8 +60,8 @@ const Notes = () => {
             ) :
               notes.length < 1 && (
                 <>
-                  <h4 className="mb-3 text-3xl font-bold">Sorry You don't have any notes.</h4>
-                  <h5 className="text-lg font-medium">Create a note, and it will appear here</h5>
+                  <h4 className="mb-3 text-3xl font-bold">Sorry, You don't have any notes.</h4>
+                  <h5 className="text-lg font-medium">Create a Note, and it will appear here.</h5>
                 </>
               )
             }
