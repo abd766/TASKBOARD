@@ -88,7 +88,7 @@ const SignUpForm = () => {
 
     return (
         <div className='container max-w-4xl py-4 mx-auto md:py-10'>
-            <Heading title="Sign Up" description='Sign Up to DevNotes' />
+            <Heading title="Sign Up" description='Sign Up to TaskBoard' />
             <Separator className='mt-4 mb-8' />
             <div className='max-w-lg mx-auto'>
                 <Form {...form}>
@@ -199,7 +199,7 @@ const SignUpForm = () => {
                             </div>
                             <div className='sm:pr-3'>
                                 <p className='flex items-center text-base sm:text-lg text-accent-foreground/50 text- '>
-                                    <span>Have an Accout ?</span>
+                                    <span>Have an Account ?</span>
                                     <Link to={loading ? "/signup" : "/login"} className={`'pb-[2px] ml-2 text-sm sm:text-base border-b border-b-current ${loading ? "text-input" : "text-accent-foreground/90 hover:text-accent-foreground"}`}>Log in now!</Link>
                                 </p>
                             </div>
