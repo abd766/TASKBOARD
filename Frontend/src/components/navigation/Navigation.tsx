@@ -13,7 +13,7 @@ const navLinks = [
     },
     {
         id: 2,
-        name: "TextUtils",
+        name: "Text-o-fi",
         link: "/textutils"
     },
     {
