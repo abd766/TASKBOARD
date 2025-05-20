@@ -73,7 +73,7 @@ const LoginForm = () => {
 
     return (
         <div className='container max-w-4xl py-4 mx-auto md:py-10'>
-            <Heading title="Login" description='Login to DevNotes' />
+            <Heading title="Login" description='Login to TaskBoard' />
             <Separator className='mt-4 mb-8' />
             <div className='max-w-lg mx-auto'>
                 <Form {...form}>
@@ -141,7 +141,7 @@ const LoginForm = () => {
                             </div>
                             <div className='sm:pr-3'>
                                 <p className='flex items-center text-base sm:text-lg text-accent-foreground/50 '>
-                                    <span>Need an Accout ?</span>
+                                    <span>Need an Account ?</span>
                                     <Link to={loading ? "/login" : "/signup"} className={`pb-[2px] ml-2 text-sm sm:text-base border-b border-b-current  ${loading ? "text-input" : "text-accent-foreground/90 hover:text-accent-foreground"}`}>Sign up now!</Link>
                                 </p>
                             </div>
