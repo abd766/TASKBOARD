@@ -1,142 +1,159 @@
-# Dev_Notes : Secured on the cloud
+# **TaskBoard** : Secured on the Cloud
 
-### Dev_Notes is a Notes App created using MERN Stack, to help users store their notes, and access it anywhere anytime.
-
----
-
-### Technologies Used:
-
-#### Frontend:
-
-- ReactJS
-- Styling: [ Tailwind CSS, clsx, class-variance-authority, tailwind-merge, tailwindcss-animate ]
-- UI: [ shadcn-ui, radix-ui, next-themes, react-hot-toast ]
-- Validation: [ Typescript, zod, use-form ]
-- Icons: [ lucide-react ]
-- axios
-
-#### Backend:
-
-- NodeJS
-- ExpressJs
-- MongoDb
-- mongoose
-- bcryptjs
-- jsonwebtoken
+**TaskBoard** is a Notes App built with the **MERN stack**. It helps users securely store and access their notes **anytime, anywhere** via the cloud.
 
 ---
 
-## Getting Started with the Project
+## 🚀 Technologies Used
 
-- Fork the Repository.
-- Clone the Repository to your local Environment.
+### 🔹 Frontend
 
-```js
-run `git init` in your project directory
-run `git clone Your_Repository_Link` ex.=> `git clone https://github.com/YOUR_GITHUB_USERNAME/Dev_Notes.git`
+- **ReactJS**
+- **Styling**: Tailwind CSS, `clsx`, `class-variance-authority`, `tailwind-merge`, `tailwindcss-animate`
+- **UI**: `shadcn-ui`, `radix-ui`, `next-themes`, `react-hot-toast`
+- **Validation**: TypeScript, Zod, `use-form`
+- **Icons**: `lucide-react`
+- **HTTP Client**: `axios`
+
+### 🔹 Backend
+
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **Mongoose**
+- **bcryptjs**
+- **jsonwebtoken**
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/abd766/TASKBOARD.git
+cd TASKBOARD
 ```
 
-- Run `npm run init` cpmmand in the root directory of the project (To install all the dependencies).
-- Create a .env file in the "Backend" Folder.
+### 2. Install Dependencies
 
-```js
-JWT_SIGNATURE = YOUR_JWT_SECRET
-MONGO_URI = YOUR_MONGO_DB_URL
-FRONTEND_DEV = VITE_APP_URL ` http://localhost/3000 `
-FRONTEND = YOUR_FRONTEND_WEBSITE_LINK (after deploying your frontend)
+In the root directory:
 
+```bash
+npm run init
 ```
 
-- Create a .env file in the "Frontend" Folder.
+### 3. Setup Environment Variables
 
-```js
-VITE_HOST = ` http://localhost:BACKEND_PORT `
-In Development => ` http://localhost:5000 ` (default:5000)
-In Production  => YOUR_BACKEND_WEBSITE_LINK (afer deploying your backend)
+#### 🔸 Backend - `.env` (Inside `Backend` Folder)
+
+```env
+JWT_SIGNATURE=your_jwt_secret
+MONGO_URI=your_mongo_db_url
+FRONTEND_DEV=http://localhost:3000
+FRONTEND=your_deployed_frontend_url
 ```
 
-- Run `npm run dev`
+#### 🔸 Frontend - `.env` (Inside `Frontend` Folder)
 
-`Your App is live on YOUR_FRONTEND_PORT(3000) and server is running on YOUR_BACKEND_PORT(5000)`
+```env
+VITE_HOST=http://localhost:5000
+# Or in production:
+# VITE_HOST=your_deployed_backend_url
+```
+
+### 4. Start the App
+
+```bash
+npm run dev
+```
+
+Your app should now be running on:
+
+- **Frontend**: `http://localhost:3000`
+- **Backend**: `http://localhost:5000`
 
 ---
 
-### Update App according to you.
+## ✏️ Update the App
 
-### Run the following commands
+### Common Git Workflow
 
-- Setup:
-  - `git branch -M main`
-  - `git remote add origin main`
-  - `git checkout -m [new_update_branch_name]`
-- Update or Add any functionality...
-- Add and commit Your changes:
-  - `git add .`
-  - `git commit -m "YOUR_COMMIT_MESSAGE"`
-  - `git push -u origin [new_update_branch_name]`
+```bash
+git branch -M main
+git checkout -b your_feature_branch
+# Make changes...
+git add .
+git commit -m "Your commit message"
+git push -u origin your_feature_branch
+```
 
-`You have Updated you Github Repository with these changes`
+Your changes are now pushed to GitHub.
 
 ---
 
-## Deploy the App
+## 🚀 Deploying the App
 
-- Create an Accout on Vercel.com
-- Connect your Github account
-- Allow Your Repository access for vercel
+### 1. Create a Vercel Account
 
-### Create Frontend
+- Go to [Vercel](https://vercel.com)
+- Connect your GitHub account
+- Grant access to the repository
 
-- On Dashboard click NEW_PROJECT
+---
+
+### 🔹 Deploy Frontend
+
+- Click **New Project**
 - Select your repository
-- Connect your github repository
-- Choose root directory as FRONTEND
-- Override output direcory to build.
+- Set the **root directory** to `Frontend`
+- Set **output directory** to `build`
 
-#### Add details:
+#### Environment Variables
 
-```js
-Name : YOUR_APP_NAME
-Branch : main
-Root Directory : Frontend
-publish directory : build
+```env
+Name: YOUR_APP_NAME
+Branch: main
+Root Directory: Frontend
+Publish Directory: build
 ```
 
-- click deploy.
-- Copy your newly created WEBSITE_URL it will needed in next step.
+- Click **Deploy**
+- Copy the frontend **website URL** (needed for backend deployment)
 
-### Create Backend
+---
 
-- On Dashboard click NEW_PROJECT
+### 🔹 Deploy Backend
+
+- Click **New Project**
 - Select your repository
-- Connect your github repository
-- Choose root directory as BACKEND
+- Set the **root directory** to `Backend`
 
-```js
-Add details:
-Name : YOUR_APP_NAME
-Branch : main
-Root Directory : BACKEND
+#### Environment Variables
 
-**** Under Environment **** => create a environment variable
-
-key   : FRONTEND, value : YOUR_FRONTEND_WEBSITE_URL (PASTE YOUR FRONTEND URL HERE),
-key   : JWT_SIGNATURE, value : YOUR_JWT_SECRET,
-key   : MONGO_URI, value : YOUR_MONGO_DB_URL,
-key   : FRONTEND_DEV, value : ` http://localhost:3000 `
-
+```env
+FRONTEND=your_frontend_website_url
+FRONTEND_DEV=http://localhost:3000
+JWT_SIGNATURE=your_jwt_secret
+MONGO_URI=your_mongo_db_url
 ```
 
-- click deploy
-- Copy your WEBSITE_URL
-- Go to dashboard and go to your frontend app
-- Under Environment => add enviromnment=> create a environment variable
+- Click **Deploy**
+- Copy the backend **website URL**
 
-```js
-key: VITE_HOST;
-value: YOUR_BACKEND_WEBSITE_URL;
+---
+
+### 🔹 Update Frontend `.env` on Vercel
+
+- Go to your **Frontend Project** on Vercel
+- Add the following environment variable:
+
+```env
+VITE_HOST=your_backend_website_url
 ```
 
 ---
 
-## Your website is live on your Frontend Website Link.
+## ✅ Your TaskBoard App is Now Live!
+
+Access it using your deployed frontend URL. Happy Note Taking! 📝
